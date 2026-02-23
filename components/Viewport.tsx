@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { formatDate } from '@/lib/utils';
+import workData from '@/data/work.json';
 import type {
   ViewportProps,
   WorkEntry,
@@ -68,17 +69,46 @@ function ErrorView({ endpoint, message }: { endpoint: string; message: string })
   );
 }
 
+// ─── Experience Calculator ─────────────────────────────────────────────────────
+function calcExperience(jobs: { startDate: string; endDate: string | null }[]): { value: string; label: string } {
+  const now = new Date();
+  let totalMonths = 0;
+
+  for (const job of jobs) {
+    const [sy, sm] = job.startDate.split('-').map(Number);
+    const startTotal = sy * 12 + sm;
+
+    let endTotal: number;
+    if (job.endDate) {
+      const [ey, em] = job.endDate.split('-').map(Number);
+      endTotal = ey * 12 + em;
+    } else {
+      endTotal = now.getFullYear() * 12 + (now.getMonth() + 1);
+    }
+
+    totalMonths += Math.max(0, endTotal - startTotal);
+  }
+
+  if (totalMonths < 12) {
+    return { value: `${totalMonths}`, label: `Month${totalMonths !== 1 ? 's' : ''} Experience` };
+  }
+
+  const years = Math.floor(totalMonths / 12);
+  const rem = totalMonths % 12;
+  const display = rem >= 6 ? `${years}.5+` : `${years}+`;
+  return { value: display, label: 'Years Experience' };
+}
+
 // ─── Home View ────────────────────────────────────────────────────────────────
 function HomeView() {
+  const exp = calcExperience(workData);
   return (
     <div className="home-splash">
       <div>
         <div className="splash-name">
-          <span className="invert-block">FULL</span>
+          <span className="invert-block">SOFTWARE</span>
           <br />
-          STACK
-          <br />
-          ENGINEER.
+          DEVELOPER.
         </div>
         <div className="splash-tagline">
           Java · Spring Boot · Cloud · Systems Design · Open Source
@@ -86,15 +116,15 @@ function HomeView() {
       </div>
       <div className="splash-grid">
         <div className="splash-stat">
-          <span className="stat-num">1+</span>
-          <div className="stat-label">Years Experience</div>
+          <span className="stat-num">{exp.value}</span>
+          <div className="stat-label">{exp.label}</div>
         </div>
         <div className="splash-stat">
           <span className="stat-num">3</span>
           <div className="stat-label">Projects Built</div>
         </div>
         <div className="splash-stat">
-          <span className="stat-num">4</span>
+          <span className="stat-num">6</span>
           <div className="stat-label">Certifications</div>
         </div>
       </div>
