@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'PORTFOLIO.SYS',
-  description: 'Full Stack Engineer Portfolio',
+  description: 'Software Developer Portfolio',
 };
 
 export default function RootLayout({

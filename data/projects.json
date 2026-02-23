@@ -3,21 +3,21 @@
     "title": "Dynamic Event Orchestration Engine",
     "description": "Event management system with Role-Based Access Control (RBAC), DTO-based REST API with explicit exception handling, and QR code generation for ticket verification.",
     "stack": ["Java", "Spring Boot", "PostgreSQL", "JWT", "REST API"],
-    "repoUrl": "https://github.com/devang609",
+    "repoUrl": "https://github.com/devang609/event-engine",
     "status": "COMPLETE"
   },
   {
     "title": "Enterprise-Grade Authentication System",
     "description": "Stateless authentication system using JWT access and refresh tokens with role and scope-based authorization, token rotation, revocation, and replay protection.",
     "stack": ["Java", "Spring Security", "JWT", "Redis"],
-    "repoUrl": "https://github.com/devang609",
+    "repoUrl": "https://github.com/devang609/auth-system",
     "status": "COMPLETE"
   },
   {
     "title": "API Incidence Monitor",
     "description": "Decoupled API starter and collector service that automatically captures API latency and status codes, with Bucket4j rate limiting and JWT-secured collector endpoints.",
     "stack": ["Spring Boot", "MongoDB", "Bucket4j", "Servlet Filters"],
-    "repoUrl": "https://github.com/devang609",
+    "repoUrl": "https://github.com/devang609/api-monitor",
     "status": "ACTIVE"
   }
 ]
