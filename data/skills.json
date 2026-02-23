@@ -1,0 +1,7 @@
+{
+  "Languages": ["Java", "C++", "SQL", "Python", "JavaScript"],
+  "Frameworks & Libraries": ["Spring Boot", "Spring Security", "Hibernate", "REST APIs", "Docker"],
+  "Databases": ["PostgreSQL", "MongoDB", "Redis", "MySQL"],
+  "Tools & Technologies": ["Git", "Maven", "JWT", "Microservices", "Postman"],
+  "Core Competencies": ["Object-Oriented Design", "Data Structures & Algorithms", "System Design", "Security Best Practices"]
+}

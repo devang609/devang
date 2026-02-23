@@ -1,0 +1,15 @@
+[
+  {
+    "company": "American Chase",
+    "location": "Indore, India",
+    "role": "Associate System Engineer",
+    "startDate": "2025-12",
+    "endDate": null,
+    "responsibilities": [
+      "Support the team in software design, development, and testing",
+      "Write clean, efficient, and well-documented code following team standards",
+      "Assist in troubleshooting and debugging under guidance of senior developers",
+      "Participate in code reviews and collaborate to improve code quality"
+    ]
+  }
+]
