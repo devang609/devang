@@ -20,17 +20,16 @@ function LoadingView({ section }: { section: string }) {
     setFill(0);
     const id = setInterval(() => {
       setFill((prev) => {
-        if (prev >= 19) {
-          clearInterval(id);
-          return 19;
-        }
-        return prev + 2;
+        const next = Math.min(prev + 2, 19);
+        if (next >= 19) clearInterval(id);
+        return next;
       });
     }, 80);
     return () => clearInterval(id);
   }, [section]);
 
-  const filled = '█'.repeat(fill) + '░'.repeat(19 - fill);
+  const remaining = Math.max(0, 19 - fill);
+  const filled = '█'.repeat(fill) + '░'.repeat(remaining);
   const pct = Math.round((fill / 19) * 100);
 
   return (
