@@ -1,0 +1,44 @@
+[
+    {
+    "name": "JPMC Software Engineering Job Simulation",
+    "issuer": "Forage",
+    "issued": "2026",
+    "expires": "N/A",
+    "id": "N/A"
+  },
+      {
+    "name": "Hewlett Packard Enterprise  - Software Engineering Job Simulation",
+    "issuer": "Forage",
+    "issued": "2026",
+    "expires": "N/A",
+    "id": "N/A"
+  },
+    {
+    "name": "Advanced Python & Generative AI",
+    "issuer": "Udemy",
+    "issued": "2024",
+    "expires": "N/A",
+    "id": "N/A"
+  },
+  {
+    "name": "Docker",
+    "issuer": "Udemy",
+    "issued": "2024",
+    "expires": "N/A",
+    "id": "N/A"
+  },
+  {
+    "name": "Core & Advanced Java",
+    "issuer": "Udemy",
+    "issued": "2023",
+    "expires": "N/A",
+    "id": "N/A"
+  },
+  {
+    "name": "Spring Boot",
+    "issuer": "Udemy",
+    "issued": "2023",
+    "expires": "N/A",
+    "id": "N/A"
+  }
+]
